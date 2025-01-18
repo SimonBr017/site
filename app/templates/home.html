@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - SimonPyt{% endblock %}
+
+{% block content %}
+<section class="hero text-center text-white" style="background-image: url('{{ url_for('static', filename='images/hero.jpg') }}'); background-size: cover; height: 100vh;">
+    <div class="container">
+        <h1 class="display-3">Welcome to SimonPyt</h1>
+        <p class="lead">Full-stack freelance developer with a passion for creating innovative solutions.</p>
+        <a href="{{ url_for('main.portfolio') }}" class="btn btn-light btn-lg">See My Work</a>
+    </div>
+</section>
+
+<section class="about py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>Hi! I'm Simon, a freelance developer with expertise in full-stack web development and data processing. I create custom solutions tailored to your needs, from simple websites to complex applications.</p>
+                <a href="{{ url_for('main.about') }}" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" class="img-fluid rounded-circle" alt="SimonPyt image to add...">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">My Work</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/project1.jpg') }}" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Title 1</h5>
+                        <p class="card-text">Description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/project2.jpg') }}" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Title 2</h5>
+                        <p class="card-text">Description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/project3.jpg') }}" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Title 3</h5>
+                        <p class="card-text">Description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">What My Clients Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Simon is an incredible developer, always exceeding expectations. Highly recommend!</p>
+                    <footer class="blockquote-footer">Client Name, <cite title="Source Title">Company</cite></footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Fast, efficient, and reliable. I couldn't have asked for a better developer!</p>
+                    <footer class="blockquote-footer">Client Name, <cite title="Source Title">Company</cite></footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Simon brought our project to life with attention to detail and excellent communication.</p>
+                    <footer class="blockquote-footer">Client Name, <cite title="Source Title">Company</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta text-center bg-dark text-white py-5">
+    <div class="container">
+        <h2>Ready to take the next step?</h2>
+        <p>Let's work together to build something amazing!</p>
+        <a href="{{ url_for('main.contact') }}" class="btn btn-light btn-lg">Contact Me</a>
+    </div>
+</section>
+
+{% endblock %}
