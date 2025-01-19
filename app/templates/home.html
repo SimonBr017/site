@@ -2,6 +2,10 @@
 
 {% block title %}Home - SimonPyt{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{{ versioned_file('css/home_action.css') }}">
+{% endblock %}
+
 {% block content %}
 <section class="hero text-center text-white" style="background-image: url('static/images/hero.jpg'); background-size: cover; height: 100vh;">
     <div class="container">
@@ -97,8 +101,12 @@
     <div class="container">
         <h2>Ready to take the next step?</h2>
         <p>Let's work together to build something amazing!</p>
-        <a href="{{ url_for('main.contact') }}" class="btn btn-light btn-lg">Contact Me</a>
+        <button class="btn btn-light btn-lg" onclick="animateAndRedirect()">Contact Me</button>
     </div>
 </section>
 
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ versioned_file('js/home_action.js') }}"> </script>
 {% endblock %}
